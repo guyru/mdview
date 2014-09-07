@@ -19,6 +19,11 @@ To install ``mdview``, use pip::
 Usage
 =====
 
+List of supported flavors is available in `python-markdown`_'s
+documentation.
+
+.. _`python-markdown`: http://pythonhosted.org/Markdown/extensions/index.html#officially-supported-extensions
+
 Authors
 =======
 * Author: `Guy Rutenberg`_

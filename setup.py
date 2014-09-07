@@ -27,9 +27,14 @@ setup(
     author_email='guyrutenberg@gmail.com',
     license = 'GPLv3+',
     packages=['mdview'],
+    entry_points = {
+        'console_scripts': [
+            'mdview = mdview:run',
+        ]
+    },
     long_description=read('README.rst'),
-    package_data={'mdview': ['static/*.js', 'static/*.css']},
-    install_requires = ['markdown'],
+    package_data={'mdview': ['static/*.js', 'static/*.css', 'templates/*.html']},
+    install_requires = ['markdown', 'flask'],
 
     classifiers = [
         ],

@@ -1,2 +1,4 @@
 include README.rst
 include LICENSE
+recursive-include mdview/templates *.html
+recursive-include mdview/static *.js *.css
