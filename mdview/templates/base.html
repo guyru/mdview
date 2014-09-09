@@ -1,6 +1,15 @@
 <!doctype html>
 <html>
 <head>
+<script type="text/javascript">
+var mtime = "{{ mtime }}";
+var source = new EventSource("{{ url_for('updates', mtime=mtime) }}");
+source.onmessage = function(event) {
+	if (event.data > mtime) {
+		window.location.reload(true);
+	}
+};
+</script>
 </head>
 <body>
 	<title>{{ title }}</title>
