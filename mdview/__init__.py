@@ -21,7 +21,7 @@ def index():
     # it would be better if we could query the mtime() of the FD itself.
 
     source = open(app.config['filename'], 'rb').read()
-    if app.extensions:
+    if app.config['extensions']:
         html = markdown.markdown(source, extensions=app.config['extensions'])
     else:
         html = markdown.markdown(source)
@@ -86,7 +86,8 @@ def run():
 
     parser.add_argument("filename")
     parser.add_argument("-x", "--extensions", help=("markdown extensions"
-                        " separated by commas"))
+                        " separated by commas. Default: %(default)s"),
+                        default="extra,codehilite")
     parser.add_argument('--version', action="version",
                         version="%(prog)s " + __version__)
     parser.add_argument('--debug', action='store_true', default=False,
