@@ -59,6 +59,11 @@ How can I run ``mdview`` without any extension?
 
   $ mdview --extensions "" path/to/file.md
 
+What are those ``error: [Errno 32] Broken pipe`` errors I see on ``stderr``?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+It happens when you close the browser and ``mdview`` still tries to
+send to it information. You can safely ignore this.
+
 
 Authors
 =======

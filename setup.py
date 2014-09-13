@@ -37,6 +37,13 @@ setup(
     install_requires = ['markdown', 'flask', 'Pygments'],
 
     classifiers = [
+        'Development Status :: 4 - Beta',
+        'Environment :: Web Environment',
+        'Intended Audience :: Developers',
+        'Intended Audience :: End Users/Desktop',
+        'License :: OSI Approved :: GNU General Public License (GPL)',
+        'Operating System :: OS Independent',
+        'Framework :: Flask',
         ],
 )
 
