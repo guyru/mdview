@@ -15,7 +15,7 @@ def get_version(filename):
     with open(filename) as fp:
         for line in fp:
             if line.startswith('__version__'):
-                exec(line)
+                exec(line,globals())
                 return __version__
 
 setup(
