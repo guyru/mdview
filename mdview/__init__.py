@@ -8,7 +8,7 @@ import markdown
 
 from flask import Flask, Markup, render_template, Response
 
-__version__ = '0.0.1'
+__version__ = '0.1.0'
 
 #app = Flask(__name__)
 app = Flask('mdview')
@@ -20,14 +20,14 @@ def index():
     mtime = int(os.path.getmtime(app.config['filename']) * 1000)
     # it would be better if we could query the mtime() of the FD itself.
 
-    source = open(app.config['filename'], 'rb').read().decode("utf-8")
+    source = open(app.config['filename'], 'r').read()
     if app.config['extensions']:
         html = markdown.markdown(source, extensions=app.config['extensions'])
     else:
         html = markdown.markdown(source)
 
     return render_template('base.html', html=Markup(html),
-                           title=app.config['filename'].decode('utf-8'),
+                           title=app.config['filename'],
                            mtime=mtime
                            )
 

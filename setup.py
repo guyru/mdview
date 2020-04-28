@@ -32,9 +32,10 @@ setup(
             'mdview = mdview:run',
         ]
     },
-    long_description=read('README.rst'),
+    long_description=read('README.md'),
     package_data={'mdview': ['static/*.js', 'static/*.css', 'templates/*.html']},
     install_requires = ['markdown', 'flask', 'Pygments'],
+    setup_requires = ['wheel'],
 
     classifiers = [
         'Development Status :: 4 - Beta',
