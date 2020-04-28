@@ -33,6 +33,7 @@ setup(
         ]
     },
     long_description=read('README.md'),
+    long_description_content_type="text/markdown",
     package_data={'mdview': ['static/*.js', 'static/*.css', 'templates/*.html']},
     install_requires = ['markdown', 'flask', 'Pygments'],
     setup_requires = ['wheel'],
